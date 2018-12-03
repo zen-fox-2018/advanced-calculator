@@ -2,19 +2,53 @@
 
 class Calculator {
   //write your code here
-  constructor () {
+  constructor (num = 0) {
+    this.result = num
   }
-  add () {
+
+  start (num) {
+    this.result += num
+    return this
   }
-  subtract () {
+
+  add (num) {
+    this.result += num
+    return this
   }
-  multiply () {
+  subtract (num) {
+    this.result -= num
+    return this
   }
-  divide () {
+  multiply (num) {
+    this.result *= num
+    return this
+  }
+  divide (num) {
+    this.result /= num
+    return this
   }
   square () {
+    this.result = this.result**2
+    return this
   }
-  squareRoot () {
+
+  power (num) {
+    this.result = Math.pow(this.result,num)
+    return this
+  }
+
+
+  rootOf (num) {
+    if(this.result < 0 && num % 2 !== 1) {
+      return NaN
+    }
+    this.result = Math.pow(this.result, 1/num)
+    return this
+  }
+
+  pi () {
+    this.result *= 3.14159265359
+    return this
   }
 }
 
@@ -27,3 +61,5 @@ class Calculator {
 */
 
 module.exports = Calculator
+
+
