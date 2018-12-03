@@ -2,19 +2,36 @@
 
 class Calculator {
   //write your code here
-  constructor () {
+  constructor (number) {
+    if(number === 'phi') this.result = 3.14
+    else this.result = number
   }
-  add () {
+  add (number) {
+    this.result += number
+    return this
   }
-  subtract () {
+  subtract (number) {
+    this.result -= number
+    return this
   }
-  multiply () {
+  multiply (number) {
+    this.result *= number
+    return this
   }
-  divide () {
+  divide (number) {
+    this.result /= number
+    return this
   }
-  square () {
+  square (number, input) {
+    this.result = Math.pow(number, input)
+    return this
   }
   squareRoot () {
+    this.result = Math.sqrt(this.result)
+    return this
+  }
+  equal() {
+    return this.result
   }
 }
 
