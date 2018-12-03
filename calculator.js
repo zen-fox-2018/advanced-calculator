@@ -2,19 +2,39 @@
 
 class Calculator {
   //write your code here
-  constructor () {
+  constructor (number) {
+    this.total = number;
   }
-  add () {
+  add (number) {
+    this.total += number;
+      console.log(this.total);
+      return this;
   }
-  subtract () {
+  subtract (number) {
+    this.total -= number;
+    return this;
   }
-  multiply () {
+  multiply (number) {
+    this.total *= number; 
+    return this;
   }
-  divide () {
+  divide (number) {
+    this.total /= number
+    return this;
   }
-  square () {
+  square (number) {
+    this.total =  Math.pow(this.total, number);
+    return this;
   }
   squareRoot () {
+    this.total = Math.sqrt(this.total);
+    return this;
+  }
+
+
+  pi () {
+    this.total *= Math.PI;
+    return this;
   }
 }
 
