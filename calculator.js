@@ -3,49 +3,49 @@
 class Calculator {
   //write your code here
   constructor (numberInput) {
-    this.input = numberInput
+    // this.input = numberInput
     this.result = numberInput
     this.tampilan = ''
-    // this.phiNumber = this.phi()
+    this.phiNumber = 3.14
   }
 
   add (inputAdd) {
     this.result = this.result + inputAdd
-    this.tampilan = `hasil kalkulasi adalah ${this.result}`
+    // this.tampilan = `hasil kalkulasi adalah ${this.result}`
     return this
   }
 
   subtract (inputSubstract) {
     this.result = this.result - inputSubstract
-    this.tampilan = `hasil kalkulasi adalah ${this.result}`
+    
     return this
   }
   multiply (inputMultiply) {
     this.result = this.result * inputMultiply
-    this.tampilan = `hasil kalkulasi adalah ${this.result}`
+    
     return this
   }
   divide (inputDivide) {
     this.result = this.result / inputDivide
-    this.tampilan = `hasil kalkulasi adalah ${this.result}`
+    
     return this
   }
   square (inputSquare) {
     this.result = Math.pow(this.result, inputSquare)
-    this.tampilan = `hasil kalkulasi adalah ${this.result}`
+    
     return this
   }
   squareRoot () {
     this.result = Math.sqrt(this.result)
-    this.tampilan = `hasil kalkulasi adalah ${this.result}`
+    
     return this
+  }  
+
+  view(){
+    this.tampilan = `hasil kalkulasi adalah ${this.result}`
+    return this.tampilan
   }
 
-  phi(){
-    let phiNumber =  3.14
-    return phiNumber
-  }
-  
   // bulatkan(input){
   //   this.result = this.result.toFixed(input)
   //   this.tampilan = `hasil kalkulasi adalah ${this.result}`
