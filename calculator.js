@@ -2,19 +2,37 @@
 
 class Calculator {
   //write your code here
-  constructor () {
+  constructor (number) {
+    this._number = number || 0;
   }
-  add () {
+  add (num) {
+    // return "hello"
+    this._number += num;
+    return this
   }
-  subtract () {
+  subtract (num) {
+    this._number -= num;
+    return this;
   }
-  multiply () {
+  multiply (num) {
+    this._number *= num;
+    return this;
   }
-  divide () {
+  divide (num) {
+    this._number /= num;
+    return this;
   }
-  square () {
+  square (num) {
+    this._number = Math.sqrt(num);
+    return this
   }
-  squareRoot () {
+  squareRoot (num) {
+    this._number = Math.pow(this._number, num);
+    return this
+  }
+  findCircle(num) {
+    this._number *= Math.PI(num);
+    return this
   }
 }
 
