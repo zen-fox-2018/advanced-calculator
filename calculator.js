@@ -29,6 +29,10 @@ class Calculator {
     this.number = Math.sqrt(this.number);
     return this;
   }
+  constantaPi () {
+    this.number = Math.PI * this.number;
+    return this;
+  }
 }
 
 /** note : you can use several features from ecmascript, such as:
