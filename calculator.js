@@ -2,19 +2,50 @@
 
 class Calculator {
   //write your code here
-  constructor () {
+  constructor (n = 0) {
+    this.total = n;
   }
-  add () {
+  n (n) {
+    this.total = n
+    return this
   }
-  subtract () {
+  add (n) {
+    this.total = this.total + n
+    return this
   }
-  multiply () {
+  subtract (n) {
+    this.total = this.total - n
+    return this
   }
-  divide () {
+  multiply (n) {
+    this.total = this.total * n
+    return this
   }
-  square () {
+  divide (n) {
+    this.total = this.total / n
+    return this
   }
-  squareRoot () {
+  square (n) {
+    for (let i = 1 ; i < n ; i++) {
+      this.total = this.total * this.total
+    }
+    return this
+  }
+  squareRoot (n = 0) {
+    this.total = Math.sqrt(this.total)
+    return this
+  }
+  phi () {
+    if (!this.total){
+      this.total = Math.PI
+    } else {
+      this.total = Math.PI * this.total
+    }
+    return this
+  }
+  clear () {
+    this.total = 0
+    return this
   }
 }
 
